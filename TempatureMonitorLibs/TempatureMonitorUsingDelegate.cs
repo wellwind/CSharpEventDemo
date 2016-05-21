@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TempatureMonitorLibs
 {
-    public class TempatureMonitorUsingDelegate
+    public partial class TempatureMonitorUsingDelegate
     {
         public delegate void TempatureChangedHandler(double tempature);
 
@@ -31,6 +31,7 @@ namespace TempatureMonitorLibs
 
         public TempatureMonitorUsingDelegate()
         {
+            // 使用delegate必須給定一個初始的委派方法
             OnTempatureChanged = tempatureChanged;
         }
 
