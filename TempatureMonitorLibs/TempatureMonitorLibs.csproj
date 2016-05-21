@@ -43,6 +43,7 @@
     <Compile Include="ITempatureMonitorObserver.cs" />
     <Compile Include="ITempatureMonitorSubject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TempatureMonitorUsingDelegate.cs" />
     <Compile Include="TempatureMonitorSubject.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

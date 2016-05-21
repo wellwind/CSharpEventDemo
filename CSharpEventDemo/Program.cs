@@ -12,6 +12,7 @@ namespace CSharpEventDemo
         private static void Main(string[] args)
         {
             // 使用一般Observer pattern
+            Console.WriteLine("Observer Pattern Demo");
             var tempatureMonitor = new TempatureMonitorSubject();
 
             var desktopApp = new DesktopApp();
@@ -28,6 +29,22 @@ namespace CSharpEventDemo
 
             Console.WriteLine("溫度變化了，現在是28.6度");
             tempatureMonitor.Tempature = 28.6;
+
+            // 使用Delegate完成Observer pattern
+            Console.WriteLine("Delegate Demo");
+            var tempatureMonitorDelegate = new TempatureMonitorUsingDelegate();
+
+            tempatureMonitorDelegate.OnTempatureChanged += desktopApp.OnTempatureChanged;
+            tempatureMonitorDelegate.OnTempatureChanged += mobileApp.OnTempatureChanged;
+
+            Console.WriteLine("溫度變化了，現在是30.5度");
+            tempatureMonitorDelegate.Tempature = 30.5;
+
+            Console.WriteLine("溫度沒變化，現在依然是30.5度");
+            tempatureMonitorDelegate.Tempature = 30.5;
+
+            Console.WriteLine("溫度變化了，現在是28.6度");
+            tempatureMonitorDelegate.Tempature = 28.6;
         }
     }
 }
