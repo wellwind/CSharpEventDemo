@@ -45,6 +45,22 @@ namespace CSharpEventDemo
 
             Console.WriteLine("溫度變化了，現在是28.6度");
             tempatureMonitorDelegate.Tempature = 28.6;
+
+            // 使用Event事件委派
+            Console.WriteLine("Event Demo");
+            var tempatureMonitorEvent = new TempatureMonitorUsingEvent();
+
+            desktopApp = new DesktopApp(tempatureMonitorEvent);
+            mobileApp = new MobileApp(tempatureMonitorEvent);
+
+            Console.WriteLine("溫度變化了，現在是30.5度");
+            tempatureMonitorEvent.Tempature = 30.5;
+
+            Console.WriteLine("溫度沒變化，現在依然是30.5度");
+            tempatureMonitorEvent.Tempature = 30.5;
+
+            Console.WriteLine("溫度變化了，現在是28.6度");
+            tempatureMonitorEvent.Tempature = 28.6;
         }
     }
 }
