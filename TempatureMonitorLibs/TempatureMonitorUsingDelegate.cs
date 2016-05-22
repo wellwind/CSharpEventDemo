@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TempatureMonitorLibs
 {
-    public partial class TempatureMonitorUsingDelegate
+    public class TempatureMonitorUsingDelegate
     {
         public delegate void TempatureChangedHandler(double tempature);
 
