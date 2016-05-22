@@ -30,6 +30,13 @@ namespace CSharpEventDemo
             Console.WriteLine("溫度變化了，現在是28.6度");
             tempatureMonitor.Tempature = 28.6;
 
+            Console.WriteLine("mobileApp不再想觀察了");
+            tempatureMonitor.UnregisterObserver(mobileApp);
+
+            Console.WriteLine("溫度變化了，現在是27.6度");
+            tempatureMonitor.Tempature = 27.6;
+            Console.WriteLine();
+
             // 使用Delegate完成Observer pattern
             Console.WriteLine("Delegate Demo");
             var tempatureMonitorDelegate = new TempatureMonitorUsingDelegate();
@@ -45,6 +52,7 @@ namespace CSharpEventDemo
 
             Console.WriteLine("溫度變化了，現在是28.6度");
             tempatureMonitorDelegate.Tempature = 28.6;
+            Console.WriteLine();
 
             // 使用Event事件委派
             Console.WriteLine("Event Demo");
