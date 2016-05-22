@@ -9,6 +9,6 @@ namespace TempatureMonitorLibs
 {
     public interface ITempatureMonitorEvent
     {
-        void OnTempatureChangedEvent(object sender, double e);
+        void OnTempatureChangedEvent(object sender, double tempature);
     }
 }

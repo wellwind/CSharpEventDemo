@@ -81,7 +81,7 @@ namespace CSharpEventDemo
 
             tempatureMonitorEvent.OnTempatureChanged += desktopApp.OnTempatureChangedEvent;
             tempatureMonitorEvent.OnTempatureChanged += mobileApp.OnTempatureChangedEvent;
-            // 額外自訂事件委派方法
+            // 額外自訂事件委派方法, 由於是宣告成事件委派, 輸入到+=時可以直接用TAB產生基本的程式碼
             tempatureMonitorEvent.OnTempatureChanged += TempatureMonitorEvent_OnTempatureChanged;
 
             Console.WriteLine("溫度變化了，現在是30.5度");
